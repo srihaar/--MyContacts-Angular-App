@@ -1,0 +1,31 @@
+<div class="row" ng-controller="ContactsCtrl">
+	<div class="large-10 columns">
+		<h4>Your Contacts</h4>
+		
+		<table>
+			<thead>
+				<tr>
+					<th width="200px">Name</th>
+					<th width="200px">Company</th>
+					<th width="25%">Street Address</th>
+					<th width="25%">Actions</th>
+			</thead>
+
+			<tbody>
+				<tr ng-repeat="contact in contacts">
+					<td ng-click="showContact(contact)">{{contact.name}}</td>
+					<td>{{contact.company}}</td>
+					<td>{{contact.email}}</td>
+					<td><a class="button tiny" ng-click="editForm(contact)">Edit</a>
+						<a class="button tiny alert" ng-click="deleteContact(contact)">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+	<div class="large-2 columns">
+		<a class="button large">+</a>
+
+</div>
